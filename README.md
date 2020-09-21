@@ -1,2 +1,2 @@
 # scaling-keras-model
-Keras model for production
+Keras model for production.
