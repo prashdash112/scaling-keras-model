@@ -31,7 +31,7 @@ def build_model(n_hidden=1,n_neurons=30,input_shape=[8],learning_rate=1e-3):
     model=tf.keras.models.Sequential()
     model.add(tf.keras.layers.InputLayer(input_shape=input_shape))
     for layer in range(n_hidden):
-        model.add(tf.keras.layers.Dense(units=n_hidden,activation='relu'))
+        model.add(tf.keras.layers.Dense(units=n_hidden,activation='relu',kernel_initializer='glorot_normal'))
     model.add(tf.keras.layers.Dense(units=1))
     optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate)
     model.compile(loss='mse',optimizer=optimizer)
